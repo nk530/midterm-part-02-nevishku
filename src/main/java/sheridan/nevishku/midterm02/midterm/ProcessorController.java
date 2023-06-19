@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ProcessorController {
-//Stage 1
     @GetMapping("/input")
     public String showInputPage() {
         return "input";
@@ -31,5 +30,4 @@ public class ProcessorController {
 
         return "output";
     }
-
 }
