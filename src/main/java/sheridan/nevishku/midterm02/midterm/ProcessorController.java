@@ -16,19 +16,20 @@ public class ProcessorController {
 
     @PostMapping("/submit")
     public String processInput(
-            @RequestParam("chipsetName") String chipsetName,
-            @RequestParam("chipsetManufacturer") String chipsetManufacturer,
+            @RequestParam("processorName") String processorName,
+            @RequestParam("manufacturer") String manufacturer,
             @RequestParam(value = "windows11Ready", required = false) boolean windows11Ready,
             Model model) {
-        if (chipsetName.isEmpty()) {
+        if (processorName.isEmpty()) {
             model.addAttribute("error", "Processor Name cannot be empty!");
             return "input";
         }
 
-        model.addAttribute("processorName", chipsetName);
-        model.addAttribute("manufacturer", chipsetManufacturer);
+        model.addAttribute("processorName", processorName);
+        model.addAttribute("manufacturer", manufacturer);
         model.addAttribute("windows11Ready", windows11Ready);
 
         return "output";
     }
+
 }
