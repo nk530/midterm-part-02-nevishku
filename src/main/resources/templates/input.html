@@ -3,31 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <title>Processors - Input Page</title>
-  <!-- Stage 1 -->
-  <!-- Styling Not Implement Yet -->
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      width: 400px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-<h1>Processors - Input Page</h1>
 <form action="#" th:action="@{/submit}" method="post">
+  <h1>Processors - Input Page</h1>
+
   <label>Processor Name:</label>
   <input type="text" name="processorName" required>
-
-  <br><br>
 
   <label>Manufacturer:</label>
   <input type="radio" name="manufacturer" value="Intel" checked> Intel
   <input type="radio" name="manufacturer" value="AMD"> AMD
   <input type="radio" name="manufacturer" value="Apple"> Apple
 
-  <br><br>
-
   <label>Windows 11 Ready:</label>
   <input type="checkbox" name="windows11Ready">
 
-  <br><br>
-
   <input type="submit" value="Submit">
 </form>
+
 <footer>Sheridan College - Nevish Kumar Jeetun</footer>
 </body>
 </html>
