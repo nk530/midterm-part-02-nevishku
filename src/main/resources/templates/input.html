@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Processors - Input Page</title>
+  <title>Processor's Details</title>
   <style>
     body {
       display: flex;
@@ -56,16 +56,16 @@
 <form action="#" th:action="@{/submit}" method="post">
   <h1>Processors - Input Page</h1>
 
-  <label>Processor Name:</label>
-  <input type="text" name="processorName" required>
+  <label>Chipset Name:</label>
+  <input type="text" name="chipsetName" required>
 
-  <label>Manufacturer:</label>
-  <input type="radio" name="manufacturer" value="Intel" checked> Intel
-  <input type="radio" name="manufacturer" value="AMD"> AMD
-  <input type="radio" name="manufacturer" value="Apple"> Apple
+  <label>Chipset Manufacturer:</label>
+  <input type="radio" name="chipsetManufacturer" value="Intel" checked> Intel
+  <input type="radio" name="chipsetManufacturer" value="AMD"> AMD
+  <input type="radio" name="chipsetManufacturer" value="Apple"> Apple
 
-  <label>Windows 11 Ready:</label>
-  <input type="checkbox" name="windows11Ready">
+  <label>Is Windows 11 Ready:</label>
+  <input type="checkbox" name="isWin11Ready">
 
   <input type="submit" value="Submit">
 </form>

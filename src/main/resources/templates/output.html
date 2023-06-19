@@ -2,17 +2,43 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Processors - Output Page</title>
-  <!-- Stage 1 -->
-  <!-- Styling Not Implement Yet -->
+  <title>Processor's Details</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 <h1>Processors - Output Page</h1>
-<p><strong>Processor Name:</strong> <span th:text="${processorName}"></span></p>
-<p><strong>Manufacturer:</strong> <span th:text="${manufacturer}"></span></p>
-<p><strong>Windows 11 Ready:</strong> <span th:text="${windows11Ready} ? 'Yes' : 'No'"></span></p>
-
-<br>
+<p><strong>Chipset Name:</strong> <span th:text="${chipsetName}"></span></p>
+<p><strong>Chipset Manufacturer:</strong> <span th:text="${chipsetManufacturer}"></span></p>
+<p><strong>Is Windows 11 Ready:</strong> <span th:text="${isWin11Ready} ? 'Yes' : 'No'"></span></p>
 
 <a href="/input">Back</a>
 <footer>Sheridan College - Nevish Kumar Jeetun</footer>

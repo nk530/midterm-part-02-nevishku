@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ProcessorController {
+
     @GetMapping("/input")
     public String showInputPage() {
         return "input";
@@ -15,18 +16,18 @@ public class ProcessorController {
 
     @PostMapping("/submit")
     public String processInput(
-            @RequestParam("processorName") String processorName,
-            @RequestParam("manufacturer") String manufacturer,
-            @RequestParam(value = "windows11Ready", required = false) boolean windows11Ready,
+            @RequestParam("chipsetName") String chipsetName,
+            @RequestParam("chipsetManufacturer") String chipsetManufacturer,
+            @RequestParam(value = "isWin11Ready", required = false) boolean isWin11Ready,
             Model model) {
-        if (processorName.isEmpty()) {
+        if (chipsetName.isEmpty()) {
             model.addAttribute("error", "Processor Name cannot be empty!");
             return "input";
         }
 
-        model.addAttribute("processorName", processorName);
-        model.addAttribute("manufacturer", manufacturer);
-        model.addAttribute("windows11Ready", windows11Ready);
+        model.addAttribute("chipsetName", chipsetName);
+        model.addAttribute("chipsetManufacturer", chipsetManufacturer);
+        model.addAttribute("isWin11Ready", isWin11Ready);
 
         return "output";
     }
